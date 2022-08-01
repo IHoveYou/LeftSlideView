@@ -1,0 +1,3 @@
+rootProject.name = "LXYUTILS"
+include ':app'
+include ':leftslideview'

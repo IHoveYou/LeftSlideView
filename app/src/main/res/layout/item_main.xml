@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="41dp">
+
+    <com.example.leftslideview.LeftSlideHorizontalScrollView
+        android:scrollbars="none"
+        android:id="@+id/leftSlideHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="40dp"
+        >
+        <com.example.leftslideview.LeftSlideView
+            android:id="@+id/leftSlideView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:paddingHorizontal="15dp"
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center_vertical"
+                    android:text="23333"
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                  </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/llLeftSlidButton"
+                android:background="@color/teal_700"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+        </com.example.leftslideview.LeftSlideView>
+
+    </com.example.leftslideview.LeftSlideHorizontalScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+</LinearLayout>

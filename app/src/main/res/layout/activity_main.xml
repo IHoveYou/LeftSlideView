@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.example.leftslideview.LeftSlideHorizontalScrollView
+        android:id="@+id/leftSlideHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+    <com.example.leftslideview.LeftSlideView
+        android:id="@+id/leftSlideView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="32dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="内容区域文字" />
+
+            <TextView
+                android:textSize="32dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="内容区域文字2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLeftSlidButton"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            <TextView
+                android:textSize="32dp"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="按钮区域1" />
+
+            <TextView
+                android:textSize="32dp"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="按钮区域2" />
+        </LinearLayout>
+    </com.example.leftslideview.LeftSlideView>
+    </com.example.leftslideview.LeftSlideHorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="刷新" />
+</LinearLayout>
