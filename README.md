@@ -48,7 +48,7 @@ LeftSlideView 左右分区布局 分区方式 包裹下第一个view为左侧内
 ```
 
 > 列表联合使用 提供了 LeftSlideProvider 控制类
-使用 LeftSlideProvider.addLinkedView 添加需要联动的类
+使用 LeftSlideProvider.addView 添加需要联动的类
 联动效果为当前只有一个View被展开，展开新的view之后老View自动折叠
 将需要联动的VIew 添加入控制器，可以实现多View联动，多adapter联动等
 
@@ -60,7 +60,7 @@ class ListAdapter(val list: ArrayList<String>, val context: Context) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder1 {
         val binding = ItemMainBinding.inflate(LayoutInflater.from(context), parent, false)
         //将需要联动的VIew 添加入控制器，可以实现多View联动，多adapter联动等
-        leftSlideUtils.addLinkedView(binding.leftSlideHorizontalScrollView)
+        leftSlideUtils.addView(binding.leftSlideHorizontalScrollView)
         return MainAdapter.ViewHolder1(binding.root)
     }
 
