@@ -2,8 +2,7 @@
 > 导入依赖
 
 ```kotlin
-debugImplementation('com.ztocwst.scm.engines:ZTW_Engines_LeftSlide:1.0.0-SNAPSHOT') { changing = true }
-releaseImplementation('com.ztocwst.scm.engines:ZTW_Engines_LeftSlide:1.0.0') { changing = true }
+Implementation('com.github.IHoveYou:LeftSlideView:1.2.0')
 
 ```
 
