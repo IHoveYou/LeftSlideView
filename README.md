@@ -2,7 +2,7 @@
 > 导入依赖
 
 ```kotlin
-Implementation('com.github.IHoveYou:LeftSlideView:v1.2.0')
+Implementation 'com.github.IHoveYou:LeftSlideView:v1.2.0'
 
 ```
 
