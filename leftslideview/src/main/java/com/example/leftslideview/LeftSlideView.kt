@@ -2,7 +2,6 @@ package com.example.leftslideview
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.View
 import android.view.ViewGroup
 
 /**
@@ -14,6 +13,8 @@ class LeftSlideView : ViewGroup {
     var wSize = 0// 水平方向的测量大小
     var tWidth = 0//实际需要宽度
     var tHeight = 0//实际需要高度
+    fun getContentView()= getChildAt(0) //获取内容区域
+    fun getBtnView() = getChildAt(1) //获取按钮区域
     constructor(context: Context) : super(context) {
     }
 
@@ -48,8 +49,8 @@ class LeftSlideView : ViewGroup {
 
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
-        var contentView = getChildAt(0) //获取内容区域
-        var btnView = getChildAt(1) //获取按钮区域
+        var contentView = getContentView()//获取内容区域
+        var btnView = getBtnView() //获取按钮区域
 
         contentView?.layout(0, 0, wSize, tHeight)//设置内容区域显示位置
         btnView?.layout(wSize, 0, tWidth, tHeight)//设置按钮区域显示位置

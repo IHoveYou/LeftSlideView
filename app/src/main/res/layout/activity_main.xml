@@ -15,7 +15,6 @@
         android:scrollbars="none">
 
     <com.example.leftslideview.LeftSlideView
-        android:id="@+id/leftSlideView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -44,7 +43,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/llLeftSlidButton"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:orientation="horizontal" >

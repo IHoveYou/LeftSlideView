@@ -3,10 +3,7 @@ package com.example.leftslideview
 import android.content.Context
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.view.View
 import android.widget.HorizontalScrollView
-import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.item_left_slide.view.*
 
 
 /**
@@ -35,12 +32,12 @@ class LeftSlideHorizontalScrollView : HorizontalScrollView {
      * 按钮展开状态
      */
     var isRollOut = false
-    set(value) {
-        field = value
-        post {
-            smoothScrollTo(if (value) widthPixels else 0, 0)
+        set(value) {
+            field = value
+            post {
+                smoothScrollTo(if (value) widthPixels else 0, 0)
+            }
         }
-    }
 
 
     constructor(context: Context?) : super(context) {
@@ -65,7 +62,7 @@ class LeftSlideHorizontalScrollView : HorizontalScrollView {
                     var leftSlideView= getChildAt(0) as LeftSlideView
                     if (leftSlideView.childCount ==2){
                         //获取右侧布局宽度
-                        widthPixels = leftSlideView.getChildAt(1).llLeftSlidButton?.width?:0
+                        widthPixels = leftSlideView.getBtnView()?.width?:0
                     }
                 }
 
